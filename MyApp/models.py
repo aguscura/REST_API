@@ -66,7 +66,7 @@ class Account(AbstractBaseUser):
 
 class imagen(models.Model):
 
-    imagen = models.ImageField(upload_to='')
+    imagen = models.ImageField(upload_to='Imagenes')
 
     def __str__(self):
         return imagen

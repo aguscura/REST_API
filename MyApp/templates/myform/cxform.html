@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form method="post">
+    <form method='POST' action='{{ action_url }}' enctype='multipart/form-data'>
         {% csrf_token %}
         {{form|linebreaks}}
         <button type='submit'> Submit </button>

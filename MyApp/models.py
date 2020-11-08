@@ -64,15 +64,9 @@ class Account(AbstractBaseUser):
         return True
 
 
-class operacion(models.Model):
+class imagen(models.Model):
 
-    OPERACION_CHOISES = (("SUMA", "Suma"), ("RESTA", "Resta"), #El primer item es lo que DEVUELVE, el segundo lo que MUESTRA.
-                         ("MULTIPLICACION", "Multiplicacion"), ("DIVISION", "Division"))
+    imagen = models.ImageField(upload_to='')
 
-
-    operacion_math = models.CharField(max_length=15, choices=OPERACION_CHOISES) #Suma, resta, etc.
-    num1 = models.IntegerField()
-    num2 = models.IntegerField()
-
-    def __str__(self): #Funcion para retornar valores, no se bien pq.
-        return self.operacion
+    def __str__(self):
+        return imagen
